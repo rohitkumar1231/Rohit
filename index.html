@@ -3,234 +3,339 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Rohit Kumar — personal portfolio, civil engineering, photography and life journey.">
-<title>Rohit Kumar — Personal Portfolio</title>
+
+<meta name="description" content="Rohit Kumar - Civil Engineering Portfolio">
+
+<title>Rohit Kumar | Civil Engineer</title>
+
 <style>
-:root{
-  --bg:#070707;--card:#101010;--text:#f5f5f5;--muted:#9a9a9a;
-  --line:#242424;--accent:#ffffff;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+
 body{
-  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-  background:var(--bg);color:var(--text);line-height:1.6;
-  overflow-x:hidden;
+    font-family:Arial, sans-serif;
+    background:#080808;
+    color:#f5f5f5;
+    line-height:1.6;
 }
-a{color:inherit;text-decoration:none}
-.container{width:min(1120px,90%);margin:auto}
+
 nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  padding:18px 0;background:rgba(7,7,7,.78);
-  backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07)
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 7%;
+    background:rgba(8,8,8,.85);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #222;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
-.nav-inner{display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:800;letter-spacing:2px;font-size:18px}
-.logo span{color:#777}
-.nav-links{display:flex;gap:28px;font-size:14px;color:#aaa}
-.nav-links a:hover{color:#fff}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+nav a{
+    color:#aaa;
+    text-decoration:none;
+    margin-left:22px;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:white;
+}
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:100px 7%;
+}
+
 .hero{
-  min-height:100vh;display:flex;align-items:center;position:relative;
-  padding:140px 0 90px;
-  background:
-   radial-gradient(circle at 75% 35%,rgba(255,255,255,.09),transparent 30%),
-   radial-gradient(circle at 15% 80%,rgba(255,255,255,.04),transparent 25%);
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    text-align:center;
+    padding-top:120px;
 }
-.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center}
-.kicker{font-size:12px;letter-spacing:4px;color:#888;text-transform:uppercase}
-h1{font-size:clamp(58px,9vw,112px);line-height:.92;letter-spacing:-5px;margin:20px 0 28px}
-h1 span{color:#666}
-.hero-text{max-width:650px;color:#aaa;font-size:18px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+
+.small{
+    color:#888;
+    letter-spacing:4px;
+    font-size:12px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(48px,10vw,90px);
+    line-height:1;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#777;
+}
+
+.hero p{
+    max-width:650px;
+    color:#aaa;
+    font-size:16px;
+    margin-bottom:30px;
+}
+
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  padding:12px 21px;border:1px solid #444;border-radius:999px;
-  font-size:14px;transition:.25s;
+    display:inline-block;
+    padding:13px 24px;
+    border:1px solid #555;
+    border-radius:30px;
+    color:white;
+    text-decoration:none;
+    margin:5px;
+    transition:.3s;
 }
-.btn.primary{background:#fff;color:#000;border-color:#fff}
-.btn:hover{transform:translateY(-2px);border-color:#fff}
-.profile-card{
-  border:1px solid var(--line);border-radius:28px;padding:34px;
-  background:linear-gradient(145deg,#111,#090909);
-  box-shadow:0 25px 80px rgba(0,0,0,.4)
+
+.btn:hover{
+    background:white;
+    color:#080808;
 }
-.avatar{
-  width:150px;height:150px;border-radius:50%;margin-bottom:25px;
-  border:1px solid #444;display:grid;place-items:center;
-  font-size:42px;font-weight:800;letter-spacing:-2px;
-  background:radial-gradient(circle,#292929,#0b0b0b);
+
+.title{
+    font-size:38px;
+    margin-bottom:30px;
 }
-.profile-card h2{font-size:26px;margin-bottom:4px}
-.profile-card p{color:#888}
-.mini{margin-top:24px;padding-top:20px;border-top:1px solid #222;color:#aaa;font-size:14px}
-section{padding:110px 0}
-.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:35px}
-.eyebrow{font-size:12px;color:#777;letter-spacing:3px;text-transform:uppercase}
-h2.section-title{font-size:clamp(38px,6vw,64px);letter-spacing:-2px;line-height:1}
-.about{max-width:760px;color:#aaa;font-size:18px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
+.text{
+    color:#aaa;
+    max-width:750px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:30px;
+}
+
 .card{
-  border:1px solid var(--line);background:var(--card);border-radius:20px;
-  padding:28px;transition:.25s
+    background:#101010;
+    border:1px solid #262626;
+    border-radius:14px;
+    padding:25px;
+    transition:.3s;
 }
-.card:hover{transform:translateY(-5px);border-color:#444}
-.card .num{color:#666;font-size:13px;margin-bottom:25px}
-.card h3{font-size:20px;margin-bottom:8px}
-.card p{color:#888;font-size:14px}
-.timeline{display:grid;gap:14px}
-.row{
-  display:grid;grid-template-columns:160px 1fr;gap:25px;
-  padding:24px 0;border-bottom:1px solid var(--line)
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#666;
 }
-.row .year{color:#777;font-size:14px}
-.row h3{font-size:20px}
-.row p{color:#888}
-.contact-box{
-  border:1px solid #292929;border-radius:28px;padding:45px;
-  text-align:center;background:linear-gradient(135deg,#111,#090909)
+
+.card h3{
+    margin-bottom:8px;
 }
-.contact-box p{color:#888;max-width:600px;margin:15px auto 25px}
-.socials{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-footer{border-top:1px solid #1d1d1d;padding:28px 0;color:#666;font-size:13px}
-.reveal{opacity:0;transform:translateY(20px);animation:reveal .8s ease forwards}
-.delay{animation-delay:.15s}
-.delay2{animation-delay:.3s}
-@keyframes reveal{to{opacity:1;transform:none}}
-@media(max-width:800px){
-  .nav-links{display:none}
-  .hero-grid{grid-template-columns:1fr;gap:45px}
-  .profile-card{max-width:430px}
-  .grid{grid-template-columns:1fr}
-  .row{grid-template-columns:1fr;gap:5px}
-  section{padding:85px 0}
-  h1{letter-spacing:-3px}
+
+.card p{
+    color:#888;
+    font-size:14px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    color:#999;
+    margin-bottom:25px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#666;
+    border-top:1px solid #222;
+    font-size:13px;
+}
+
+@media(max-width:700px){
+    nav{
+        padding:16px 5%;
+    }
+
+    nav div:last-child{
+        display:none;
+    }
+
+    section{
+        padding:85px 6%;
+    }
+
+    .hero{
+        min-height:95vh;
+    }
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .title{
+        font-size:32px;
+    }
 }
 </style>
 </head>
+
 <body>
 
 <nav>
-  <div class="container nav-inner">
-    <a class="logo" href="#">THE<span>ROHIT</span></a>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#connect">Connect</a>
+    <div class="logo">THE ROHIT</div>
+
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
     </div>
-  </div>
 </nav>
 
-<header class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="kicker reveal">Personal Portfolio · 2026</div>
-      <h1 class="reveal delay">I'm Rohit<br><span>Kumar.</span></h1>
-      <p class="hero-text reveal delay2">
-        Civil Engineering graduate, Physics graduate and a curious creator
-        documenting life, learning, travel and the journey ahead.
-      </p>
-      <div class="actions reveal delay2">
-        <a class="btn primary" href="#about">Explore my story ↓</a>
-        <a class="btn" href="https://instagram.com/therohitt2003" target="_blank" rel="noopener">Instagram ↗</a>
-      </div>
-    </div>
 
-    <aside class="profile-card reveal delay2">
-      <div class="avatar">RK</div>
-      <h2>Rohit Kumar</h2>
-      <p>Diploma in Civil Engineering · B.Sc. Physics</p>
-      <div class="mini">
-        <div>📍 India</div>
-        <div>📸 Photography · Travel · Life</div>
-        <div>💡 Always learning, always moving</div>
-      </div>
-    </aside>
-  </div>
-</header>
+<section class="hero" id="home">
+
+    <div class="small">WELCOME TO MY WORLD</div>
+
+    <h1>
+        I'm Rohit<br>
+        <span>Kumar.</span>
+    </h1>
+
+    <p>
+        Civil Engineering graduate with a background in Physics,
+        passionate about learning, construction, technology and
+        building a better future.
+    </p>
+
+    <a class="btn" href="#about">Explore My Story ↓</a>
+
+</section>
+
 
 <section id="about">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">01 — About</div>
-        <h2 class="section-title">A little about me.</h2>
-      </div>
-    </div>
-    <p class="about">
-      Hi, I'm Rohit Kumar. I have completed my Diploma in Civil Engineering
-      and B.Sc. in Physics, along with my school education and basic computer
-      knowledge. This website is my personal corner on the internet — a place
-      to share my journey, interests, work, ideas and the things I discover
-      along the way.
+
+    <h2 class="title">About Me</h2>
+
+    <p class="text">
+        Hi, I'm Rohit Kumar. I have completed my Diploma in Civil
+        Engineering and B.Sc. in Physics. I also have basic computer
+        knowledge and a strong interest in learning new skills.
+        I am focused on building my career in the engineering field
+        and continuously improving myself.
     </p>
-  </div>
+
 </section>
+
 
 <section id="education">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">02 — Education</div>
-        <h2 class="section-title">My foundation.</h2>
-      </div>
+
+    <h2 class="title">Education</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Diploma in Civil Engineering</h3>
+            <p>Civil Engineering</p>
+        </div>
+
+        <div class="card">
+            <h3>B.Sc. Physics</h3>
+            <p>Bachelor of Science</p>
+        </div>
+
+        <div class="card">
+            <h3>ISC & Matric</h3>
+            <p>School Education</p>
+        </div>
+
     </div>
-    <div class="timeline">
-      <div class="row">
-        <div class="year">QUALIFICATION</div>
-        <div><h3>Diploma in Civil Engineering</h3><p>Civil Engineering</p></div>
-      </div>
-      <div class="row">
-        <div class="year">QUALIFICATION</div>
-        <div><h3>B.Sc. in Physics</h3><p>Bachelor of Science</p></div>
-      </div>
-      <div class="row">
-        <div class="year">SCHOOL</div>
-        <div><h3>ISC & Matric</h3><p>School education</p></div>
-      </div>
-    </div>
-  </div>
+
 </section>
+
 
 <section id="skills">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">03 — Skills & Interests</div>
-        <h2 class="section-title">What I bring.</h2>
-      </div>
+
+    <h2 class="title">Skills</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🏗️ Civil Engineering</h3>
+            <p>
+                Basic civil engineering concepts,
+                construction knowledge and technical understanding.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>💻 Computer</h3>
+            <p>
+                Basic computer knowledge and
+                digital tools understanding.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📸 Photography</h3>
+            <p>
+                Interested in photography,
+                travel and visual storytelling.
+            </p>
+        </div>
+
     </div>
-    <div class="grid">
-      <article class="card"><div class="num">01</div><h3>🏗 Civil Engineering</h3><p>Technical foundation and practical understanding of civil engineering concepts.</p></article>
-      <article class="card"><div class="num">02</div><h3>💻 Computer Skills</h3><p>Basic computer knowledge and confidence with everyday digital tools.</p></article>
-      <article class="card"><div class="num">03</div><h3>📸 Photography</h3><p>Interested in photography, travel, visual storytelling and documenting moments.</p></article>
-    </div>
-  </div>
+
 </section>
 
-<section id="connect">
-  <div class="container">
-    <div class="contact-box">
-      <div class="eyebrow">04 — Connect</div>
-      <h2 class="section-title">Let's connect.</h2>
-      <p>
-        For a conversation, collaboration or simply to say hello,
-        you can find me here.
-      </p>
-      <div class="socials">
-        <a class="btn primary" href="mailto:rohitkumarhero22@gmail.com">Email me</a>
-        <a class="btn" href="https://instagram.com/therohitt2003" target="_blank" rel="noopener">Instagram</a>
-        <a class="btn" href="tel:+917561945914">Call me</a>
-      </div>
-    </div>
-  </div>
+
+<section id="contact" class="contact">
+
+    <h2 class="title">Let's Connect</h2>
+
+    <p>
+        Want to connect with me? Feel free to reach out.
+    </p>
+
+    <a class="btn" href="mailto:rohitkumarhero22@gmail.com">
+        Email Me
+    </a>
+
+    <a class="btn"
+       href="https://instagram.com/therohitt2003"
+       target="_blank">
+        Instagram
+    </a>
+
+    <p style="margin-top:20px;">
+        📞 7561945914
+    </p>
+
 </section>
+
 
 <footer>
-  <div class="container" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
-    <span>© 2026 Rohit Kumar</span>
-    <span>THE ROHIT · Personal Website</span>
-  </div>
+    © 2026 Rohit Kumar · The Rohit
 </footer>
 
 </body>
